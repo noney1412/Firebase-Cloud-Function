@@ -6,10 +6,10 @@
     yarn install
 ```
 
-## goto .firebaserc
+## goto .firebaserc and add your project name
 
 "projects": {
-"default": "<your-projects>"
+"default": "your-project"
 }
 
 then

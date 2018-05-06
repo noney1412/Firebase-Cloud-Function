@@ -1,0 +1,11 @@
+{
+  "name": "functions-with-typescript",
+  "description": "with TypeScript Test",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.16.1",
+    "@types/express": "^4.11.1",
+    "firebase-admin": "^5.4.1",
+    "firebase-functions": "^0.7.0"
+  }
+}

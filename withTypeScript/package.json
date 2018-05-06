@@ -1,0 +1,25 @@
+{
+  "name": "functions-with-typescript",
+  "description": "with TypeScript Test",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.16.1",
+    "@types/express": "^4.11.1",
+    "firebase-admin": "^5.4.1",
+    "firebase-functions": "^0.7.0"
+  },
+  "devDependencies": {
+    "tslint": "^5.10.0",
+    "typescript": "^2.8.3",
+    "cpx": "^1.5.0"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/tslint -p tsconfig.json",
+    "build": "./node_modules/.bin/tsc",
+    "postbuild":"cpx src/package.json dist/functions",
+    "predeploy": "yarn build",
+    "deploy": "firebase deploy --only functions:helloWorldTypeScript",
+    "tcpx": "cpx src/package.json dist"
+  },
+  "main": "dist/functions/index.js"
+}

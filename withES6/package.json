@@ -1,0 +1,27 @@
+{
+  "name": "cloud-functions-es6",
+  "license": "MIT",
+  "author": "Chanon Panpila",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noney1412/Firebase-Cloud-Function"
+  },
+  "scripts": {
+    "predeploy": "yarn package:functions",
+    "deploy": "firebase deploy --only functions:helloWorld",
+    "package:functions":
+      "babel \"src\" --out-dir \"dist/functions\" --copy-files --ignore \"node_modules\" ",
+    "install:src": "cd src && yarn",
+    "prepackage:functions": "rimraf \"dist/functions\"",
+    "postpackage:functions": "cd \"dist/functions\" && yarn",
+    "preserve": "yarn package:functions",
+    "serve": "firebase serve --only functions:helloWorld"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "@firebase/app-types": "^0.1.2",
+    "rimraf": "^2.6.2"
+  }
+}

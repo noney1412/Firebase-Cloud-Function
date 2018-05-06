@@ -3,7 +3,7 @@ import * as functions from "firebase-functions"
 const message = () => {
   return new Promise(resolve => {
     setTimeout(() => {
-      resolve(`with ES6 Cloud Functions!`)
+      resolve(`with async ES6 Cloud Functions !`)
     }, 5000)
   })
 }

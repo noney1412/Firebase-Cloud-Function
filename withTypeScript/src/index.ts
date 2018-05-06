@@ -3,7 +3,7 @@ import * as functions from "firebase-functions";
 const message = (): any => {
   return new Promise(resolve => {
     setTimeout(() => {
-      resolve(`with TypeScript Cloud Function`);
+      resolve(`with async TypeScript Cloud Async Function`);
     }, 5000);
   });
 };
